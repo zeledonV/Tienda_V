@@ -45,5 +45,10 @@ public class PersonaService implements IPersonaService {
     public void delete(long id) {
         personaRepository.deleteById(id); 
     }
+
+    @Override
+    public Persona getPersonaByID(Long idPersona) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
