@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
       >
       <head th:fragment="head" 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Mi tienda</title> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,10 +47,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
         </div>
     </nav>
+
 </body>
-<footer th:fragment 
+<footer th:fragment ="footer" class="bg-dark text-white fixed-bottom">
+    <div> 
+        <p>Copyright Tienda &COPY; 2022</p>
+
+        <a th:with-"urlBuilder=$(I(org.springframework.web.servlet.support.ServletUriComponentsBuilder).FromCurrentRequest0)}"
+           th:href="$(urlBuilder.replaceQueryParam("lang','es').toUristring()}">ES<a>
+
+                <a th:with="urlBuilder=$(T(org-springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequestor"
+                   thihref="$(urlBuilder.replaceQueryParam("lang','en').toUristring())">EN<a>
 
 
-        </html>
+                        </div>
+                        </footer>
+                        </<body>
+
+                            </html>
 
 
