@@ -4,7 +4,7 @@
  */
 package Tienda.demo.service;
 
-import Tienda.demo.entity.Persona;
+import Tienda.demo.entity.personas;
 import java.util.List;
 
 /**
@@ -12,16 +12,26 @@ import java.util.List;
  * @author valer
  */
 public interface IPersonaService {
-    public List<Persona> getAllPersona();
+    public List<personas> getAllPersona();
 
   
 
-    public Persona getPersonaById(long id);
+    public personas getPersonaById(long id);
 
-    public void savePersona(Persona persona);
+    public void savePersona(personas persona);
+   
 
     public void delete(long id);
 
-    public Persona getPersonaByID(Long idPersona);
+    public personas getPersonaByID(Long idpersonas);
+    
+    public personas findByNombre (String nombre);
+
+    public List<personas> getAllpersonas();
+
+    public personas getpersonasById(Long idpersonas);
+
+    public void savepersonas(personas persona);
+    
    
 }

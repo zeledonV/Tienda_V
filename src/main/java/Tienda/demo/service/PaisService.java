@@ -23,7 +23,9 @@ public class PaisService implements IPaisService {
 
     @Override
     public List<Pais> listCountry() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        return (List <Pais>)paisRepository.findAll();
+    }  
+// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    
 
 }

@@ -1,7 +1,8 @@
 
 package Tienda.demo.repository;
 
-import Tienda.demo.entity.Persona;
+
+import Tienda.demo.entity.personas;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Repository;
  * @author valer
  */
 @Repository
-public interface PersonaRepository extends CrudRepository<Persona,Long>{
+public interface PersonaRepository extends CrudRepository<personas,Long>{
+
+    public void findByNombre(String nombre);
     
 }
