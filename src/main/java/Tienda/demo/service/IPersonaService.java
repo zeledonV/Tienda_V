@@ -13,25 +13,11 @@ import java.util.List;
  */
 public interface IPersonaService {
     public List<personas> getAllPersona();
-
-  
-
-    public personas getPersonaById(long id);
-
+    public personas getPersonaById (long id);
     public void savePersona(personas persona);
-   
-
-    public void delete(long id);
-
-    public personas getPersonaByID(Long idpersonas);
-    
-    public personas findByNombre (String nombre);
-
-    public List<personas> getAllpersonas();
-
-    public personas getpersonasById(Long idpersonas);
-
-    public void savepersonas(personas persona);
-    
-   
+    public void delete (long id);
+    public personas findByNombre (String Nombre);
 }
+    
+   
+

@@ -17,59 +17,35 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class PersonaService implements IPersonaService {
+public class PersonaService implements IPersonaService{
 
     @Autowired
-    private PersonaRepository personasRepository;
-
-    @Override
-    public List<personas> getAllpersonas() {
-        return (List<personas>) personasRepository.findAll();
-    }
-
-    @Override
-    public personas getpersonasById(long id) {
-        return personasRepository.findById(id).orElse(null);
-    }
-
-    @Override
-    public void savepersonas(personas personas) {
-        personasRepository.save(personas);
-    }
-
-    @Override
-    public void delete(long id) {
-        personasRepository.deleteById(id);
-    }
-
-    @Override
-    public personas findByNombre(String nombre) {
-        return PersonaRepository.findByNombre(nombre);
-    }
+    private PersonaRepository personaRepository;
 
     @Override
     public List<personas> getAllPersona() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return (List<personas>)personaRepository.findAll();
     }
 
     @Override
     public personas getPersonaById(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return personaRepository.findById(id).orElse(null);
     }
 
     @Override
     public void savePersona(personas persona) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        personaRepository.save(persona);
     }
 
     @Override
-    public personas getPersonaByID(Long idpersonas) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void delete(long id) {
+        personaRepository.deleteById(id);
     }
 
     @Override
-    public personas getpersonasById(Long idpersonas) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public personas findByNombre(String nombre){
+        return personaRepository.findByNombre(nombre);
     }
-
 }
+
+    

@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PersonaRepository extends CrudRepository<personas,Long>{
 
-    public void findByNombre(String nombre);
+    personas findByNombre(String nombre);
     
 }

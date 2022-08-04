@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
  *
  * @author valer
  */
+@Controller
 public class LoginController {
       @GetMapping("/login")
     public String index() {

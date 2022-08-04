@@ -33,7 +33,7 @@ public class PersonaController {
     //Metodo que arrastra los datos de base de datos al htnml
     @GetMapping("/persona")
     public String index(Model model) {
-        List<personas> listaPersona = personaService.getAllpersonas();
+        List<personas> listaPersona = personaService.getAllPersona();
         model.addAttribute("titulo", "Tabla Personas");
         model.addAttribute("personas", listaPersona);
         return "personas";
@@ -51,14 +51,14 @@ public class PersonaController {
     
     @PostMapping("/save")
     public String guardarPersona(@ModelAttribute personas persona) {
-        personaService.savepersonas(persona);
+        personaService.savePersona(persona);
         return "redirect:/personas";//redirige a persona
     }
 
     //Metodo que edita
     @GetMapping("/editPersona/{id}")
     public String editarPersona(@PathVariable("id") Long idPersona, Model model) {
-        personas persona = personaService.getpersonasById(idPersona);
+        personas persona = personaService.getPersonaById(idPersona);
         List<Pais> listaPaises = paisService.listCountry();
         model.addAttribute("persona", persona);
         model.addAttribute("paises", listaPaises);
