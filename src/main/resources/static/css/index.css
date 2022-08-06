@@ -6,50 +6,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 31 may. 2022, 18:31:43
     Author     : valer
 */
-
-
-
-
-.′block′ {
-background-color: purple;
-    width:200px;
+.block{
+    background-color: purple; 
+    width: 200px; 
     height: 200px;
     padding: 20px;
-    border: 20px solid blue;
-    box-sizing:border-box;
+    border: 20px solid blue; 
+    box-sizing: border-box; 
 }
 
-.static {
-position:static;
-border:3px solid brown;
-top: 400px;
-left: 50px;
+.static{
+    position: static;
+    border: 3px solid green;
+    top:400px; 
+    left:50px; 
 }
 
-.relative {
-position:relative;
-border:3px solid red;
-top: 400px;
-left: 50px;
-width: 400px;
-height: 450px;  
-
+.relative{
+    position: relative;
+    border: 3px solid green;
+    top:400px; 
+    left:50px;  
+    width: 400px;
+    height: 500px;
 }
 
-.fixed {
-position:fixed;
-border:3px solid orange;
-top: 150px;
-left: 50px;
+.fixed{
+    position:fixed; 
+    border:3px solid green; 
+    top:150px;
+    left: 50px;
 }
 
-
-
-.absolute {
-position:absolute;
-border:3px solid orchid;
-top: 80px;
-left: 50px;
-width: 200px;
-height: 100px;
+.absolute{
+    position:absolute; 
+    border:3px solid green; 
+    top:80px;
+    left: 50px;
+    width: 200px;
+    height: 100px;
 }

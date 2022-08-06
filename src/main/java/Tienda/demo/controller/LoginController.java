@@ -13,8 +13,9 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class LoginController {
-      @GetMapping("/login")
-    public String index() {
+    
+    @GetMapping("/login")
+    public String index(){
         return "/login";
     }
 }

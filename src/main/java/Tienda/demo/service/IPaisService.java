@@ -7,12 +7,8 @@ package Tienda.demo.service;
 import Tienda.demo.entity.Pais;
 import java.util.List;
 
-/**
- *
- * @author valer
- */
+
 public interface IPaisService {
 
     public List<Pais> listCountry();
-    
 }

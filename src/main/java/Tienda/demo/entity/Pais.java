@@ -11,33 +11,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author valer
- */
 @Entity
-@Table(name = "paises")
+@Table(name="paises")
 public class Pais implements Serializable {
-
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
-    private String nombre;
-
+    private String pais;
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
-    public String getNombre() {
-        return nombre;
+    public String getPais() {
+        return pais;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
-
+    
+    
 }

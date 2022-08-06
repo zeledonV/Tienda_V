@@ -17,23 +17,33 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
  * @author valer
  */
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
-    @Bean
-    public SessionLocaleResolver localeResolver(){
-        var slr = new SessionLocaleResolver();
+public class WebConfig implements WebMvcConfigurer{
+    
+    @Bean 
+    public SessionLocaleResolver localeResolver(){ 
+        /**Tipo SessionLocaleResolver**/
+        var slr = new SessionLocaleResolver(); 
+        /**nueva variable  var slr**/
         slr.setDefaultLocale(new Locale("es"));
-        return slr;
-        
+        /**es como un getter y setter**/ /**Locale, la va al almacenar en nuestro lenguaje y lo va a guardar en el SessionLocaleResolver**/
+        return slr; 
+        /**va a devolver**/
     }
-    @Bean
+    
+     @Bean 
     public LocaleChangeInterceptor localeChangeInterceptor(){
-        var lci = new LocaleChangeInterceptor();
-        lci.setParamName("lang");
-        return lci;
-        }
+        var lci = new LocaleChangeInterceptor();  
+        /**Detectar cambios**/
+        lci.setParamName("lang"); 
+        /**Velar por el cambio, ver si hubo un cambio**/
+        return lci; 
+    }
+    
     @Override
-    public void addInterceptors (InterceptorRegistry registro){
+    public void addInterceptors(InterceptorRegistry registro){ 
+        /**Agregar la variable que va a generar los cambios, cada cuanto un url cambia**/
         registro.addInterceptor(localeChangeInterceptor());
+        /**Capte para poder ser traducidos**/
     }
     
 }

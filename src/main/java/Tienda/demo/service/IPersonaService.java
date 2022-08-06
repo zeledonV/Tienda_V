@@ -4,20 +4,15 @@
  */
 package Tienda.demo.service;
 
-import Tienda.demo.entity.personas;
+import Tienda.demo.entity.Persona;
 import java.util.List;
 
-/**
- *
- * @author valer
- */
+
 public interface IPersonaService {
-    public List<personas> getAllPersona();
-    public personas getPersonaById (long id);
-    public void savePersona(personas persona);
+    public List<Persona> getAllPersona();
+    public Persona getPersonaById (long id);
+    public void savePersona(Persona persona);
     public void delete (long id);
-    public personas findByNombre (String Nombre);
+    public Persona findByNombre (String Nombre);
 }
-    
-   
 
