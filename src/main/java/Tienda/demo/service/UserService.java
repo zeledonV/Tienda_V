@@ -4,6 +4,7 @@
  */
 package Tienda.demo.service;
 
+
 import Tienda.demo.entity.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,10 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author Fio
- */
+
+
 @Service
 public class UserService implements UserDetailsService {
 
